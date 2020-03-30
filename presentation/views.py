@@ -6,6 +6,15 @@ from pdf2image.exceptions import (
     PDFSyntaxError
 )
 
+# 유저 세션으로 페이지 결정
+def home(request):
+	user_session = request.session.get('user')
+	if user_session:
+		# content = {}
+		return render(request, 'presentation/index.html', content)
+	else:
+		return render(request, 'presentation/login.html')
+
 def pdfToImages():
     images = convert_from_path('example.pdf')
     i = 1
