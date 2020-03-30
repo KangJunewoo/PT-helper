@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'PT_helper_web',
     'applications.apps.AccountsConfig',
     'applications.apps.PresentationConfig',
 ]
