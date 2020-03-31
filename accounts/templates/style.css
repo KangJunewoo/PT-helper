@@ -9,16 +9,36 @@
   
   
 }
+
+.shaped_square
+{
+    text-align:center;
+
+    font-size:32px;
+
+    color:#FFFFFF;
+
+    padding:10px;
+
+    border:50px red;
+
+    margin:10px;
+
+    border-radius:5px;
+    background:none;
+
+
+
+
+}
   
-
-
 body,h1,h2,h3,h4,h5,button {font-family: "SeoulNamsanM", sans-serif}
-
+body{margin:0}
 
 .navi
 {
     margin:0;
-    height:7vh;
+    height:7.5vmin;
     width:100vw;
     
     background-color: rgb(239,239,237);
@@ -26,23 +46,71 @@ body,h1,h2,h3,h4,h5,button {font-family: "SeoulNamsanM", sans-serif}
 }
 
 
+
 .navi *
 {
     display:inline-block;
 }
+
 .logo_image
 {
     float:left;
+    width:15vmin;
+    margin-left:8%;
+    margin-top:-3%;
     
 }
+
 .search
 {
-    float:right;
-    width:30%;
-    margin-top:2.5vh;
+ 
+   
+    position:absolute;
+   margin-left: 3.5vmin;
+    top: 2.5vmin;
+    width:40%;
+    height: 2.5%;
+
 
 }
 
+.search_button
+{
+
+    margin-left:65vmin;
+    font-size:2.5vmin;
+
+}
+.user_id,.user_logout
+{
+    margin-right:4vmin;
+    float:right;
+    margin-top:2.7vmin;
+}
+
+#logout
+{
+    text-decoration:none;
+    color:black;
+
+
+    text-align:center;
+
+    
+    border:1px black;
+
+
+
+}
+
+#logout:hover
+{
+    color:gray;
+}
+
+
+
+/* ============== NAVI END ============== */
 .main_grid
 {
 
