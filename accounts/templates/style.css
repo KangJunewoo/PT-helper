@@ -1,0 +1,76 @@
+@font-face{
+
+    font-family:'SeoulNamsanM';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; 
+  
+  
+  
+  
+}
+  
+
+
+body,h1,h2,h3,h4,h5,button {font-family: "SeoulNamsanM", sans-serif}
+
+
+.navi
+{
+    margin:0;
+    height:7vh;
+    width:100vw;
+    
+    background-color: rgb(239,239,237);
+    
+}
+
+
+.navi *
+{
+    display:inline-block;
+}
+.logo_image
+{
+    float:left;
+    
+}
+.search
+{
+    float:right;
+    width:30%;
+    margin-top:2.5vh;
+
+}
+
+.main_grid
+{
+
+    height:93vh;
+    width:100vw;
+    margin:0;
+    display:inline-block;
+
+    background-color:white;
+
+}
+
+
+.left_side
+{
+    width:15vw;
+    height:93vh;
+    background-color: beige;
+    border : 1px black;
+    float:left;
+}
+
+.right_side
+{
+    height:93vh;
+
+    background-color: antiquewhite;
+    width:85vw;
+    float:right;
+
+}
