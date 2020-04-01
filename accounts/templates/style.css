@@ -1,144 +1,143 @@
-@font-face{
-
-    font-family:'SeoulNamsanM';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff'); 
-    font-weight: normal; 
-    font-style: normal; 
-  
-  
-  
-  
+@font-face {
+  font-family: "SeoulNamsanM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.shaped_square
-{
-    text-align:center;
-
-    font-size:32px;
-
-    color:#FFFFFF;
-
-    padding:10px;
-
-    border:50px red;
-
-    margin:10px;
-
-    border-radius:5px;
-    background:none;
-
-
-
-
-}
-  
-body,h1,h2,h3,h4,h5,button {font-family: "SeoulNamsanM", sans-serif}
-body{margin:0}
-
-.navi
-{
-    margin:0;
-    height:7.5vmin;
-    width:100vw;
-    
-    background-color: rgb(239,239,237);
-    
+/* the start of index.html css part */
+body {
+  background-color: #fafafa;
 }
 
-
-
-.navi *
-{
-    display:inline-block;
+/*높이 값은 자식에게 부여*/
+#header {
+  width: 100%;
+  position: absolute; /*x,y,z축 반드시 하나는 써야함. 띄우기 위해서 사용*/
+  left: 0;
+  top: 0;
+  z-index: 999; /*가장 위에 떠있어야하니까*/
+  background-color: #d9c2b9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.logo_image
-{
-    float:left;
-    width:15vmin;
-    margin-left:8%;
-    margin-top:-3%;
-    
+#header .logo > a {
+  color: transparent;
 }
 
-.search
-{
- 
-   
-    position:absolute;
-   margin-left: 3.5vmin;
-    top: 2.5vmin;
-    width:40%;
-    height: 2.5%;
-
-
+/*logo의 높이를 80px로 설정*/
+#header .logo img {
+  padding: 22px;
+  width: 32px;
+  height: 32px;
 }
 
-.search_button
-{
+/* the end of index.html css part */
 
-    margin-left:65vmin;
-    font-size:2.5vmin;
+.shaped_square {
+  text-align: center;
 
-}
-.user_id,.user_logout
-{
-    margin-right:4vmin;
-    float:right;
-    margin-top:2.7vmin;
-}
+  font-size: 32px;
 
-#logout
-{
-    text-decoration:none;
-    color:black;
+  color: #ffffff;
 
+  padding: 10px;
 
-    text-align:center;
+  border: 50px red;
 
-    
-    border:1px black;
+  margin: 10px;
 
-
-
+  border-radius: 5px;
+  background: none;
 }
 
-#logout:hover
-{
-    color:gray;
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  font-family: "SeoulNamsanM", sans-serif;
+}
+body {
+  margin: 0;
 }
 
+.navi {
+  margin: 0;
+  height: 7.5vmin;
+  width: 100vw;
 
+  background-color: rgb(239, 239, 237);
+}
+
+.navi * {
+  display: inline-block;
+}
+
+.logo_image {
+  float: left;
+  width: 15vmin;
+  margin-left: 8%;
+  margin-top: -3%;
+}
+
+.search {
+  position: absolute;
+  margin-left: 3.5vmin;
+  top: 2.5vmin;
+  width: 40%;
+  height: 2.5%;
+}
+
+.search_button {
+  margin-left: 65vmin;
+  font-size: 2.5vmin;
+}
+.user_id,
+.user_logout {
+  margin-right: 4vmin;
+  float: right;
+  margin-top: 2.7vmin;
+}
+
+#logout {
+  text-decoration: none;
+  color: black;
+
+  text-align: center;
+
+  border: 1px black;
+}
+
+#logout:hover {
+  color: gray;
+}
 
 /* ============== NAVI END ============== */
-.main_grid
-{
+.main_grid {
+  height: 93vh;
+  width: 100vw;
+  margin: 0;
+  display: inline-block;
 
-    height:93vh;
-    width:100vw;
-    margin:0;
-    display:inline-block;
-
-    background-color:white;
-
+  background-color: white;
 }
 
-
-.left_side
-{
-    width:15vw;
-    height:93vh;
-    background-color: beige;
-    border : 1px black;
-    float:left;
+.left_side {
+  width: 15vw;
+  height: 93vh;
+  background-color: beige;
+  border: 1px black;
+  float: left;
 }
 
-.right_side
-{
-    height:93vh;
+.right_side {
+  height: 93vh;
 
-    background-color: antiquewhite;
-    width:85vw;
-    float:right;
-
+  background-color: antiquewhite;
+  width: 85vw;
+  float: right;
 }
