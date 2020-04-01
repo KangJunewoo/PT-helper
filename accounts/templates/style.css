@@ -13,13 +13,20 @@ body {
 
 /*높이 값은 자식에게 부여*/
 #header {
+  margin: 0;
   width: 100%;
   position: absolute; /*x,y,z축 반드시 하나는 써야함. 띄우기 위해서 사용*/
   left: 0;
   top: 0;
-  z-index: 999; /*가장 위에 떠있어야하니까*/
+  z-index: 998; /*가장 위에 떠있어야하니까*/
   background-color: #d9c2b9;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#header .logo {
+  margin-left: 10px;
+  width: 100px;
+  height: 32px;
 }
 
 #header .logo > a {
@@ -27,13 +34,89 @@ body {
 }
 
 /*logo의 높이를 80px로 설정*/
-#header .logo img {
-  padding: 22px;
+#header .logo .main_logo {
+  margin: 0;
+  background-image: url(/asset/data.png);
+  background-size: cover;
   width: 32px;
   height: 32px;
 }
 
-/* the end of index.html css part */
+.index_main_container {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  background-color: gray;
+}
+
+.index_inner {
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 1194px;
+  height: 808px;
+  /*background-color: indianred;*/
+}
+
+.index_main_banner {
+  padding-top: 32px;
+  height: 350px;
+  /*background-color: #4e4c4c;*/
+}
+
+.index_main_title {
+  margin: 0 auto;
+  width: 786px;
+  height: 165px;
+  text-align: center;
+  vertical-align: center;
+  /*background-color: #fafafa;*/
+}
+
+.index_main_title h1 {
+  font-size: 4em;
+  font-family: "Rock Salt", cursive;
+  line-height: 165px;
+  vertical-align: center;
+}
+
+.index_sub_title {
+  margin: 0 auto;
+  width: 582px;
+  height: 80px;
+  text-align: center;
+  /*background-color: aliceblue;*/
+}
+
+.index_sub_title {
+  font-size: 20px;
+  font-family: "Comic Neue", cursive;
+  line-height: 60px;
+}
+
+.kakao_login_btn {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.kakao_login_btn button {
+  width: 380px;
+  height: 50px;
+  font-size: 20px;
+  background-color: rgb(219, 219, 82);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.index_contents_box {
+  background-image: url("/asset/train.jpg");
+  background-size: cover;
+  display: float;
+  margin-top: 80px;
+  height: 378px;
+  background-color: gray;
+}
 
 .shaped_square {
   text-align: center;
