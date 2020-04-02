@@ -79,7 +79,7 @@ body{margin:0}
     {
         display:inline;
         position:absolute;
-        margin-left: 13vmin;
+        margin-left: 15vmin;
         top: 2.5vmin;
     }
 
@@ -151,7 +151,7 @@ body{margin:0}
 .left_side
 {
     margin-top:-0.3vh;
-    
+    display: block;
     z-index:-33;
     width:14.9vw;
     height:93vmin;
@@ -159,6 +159,58 @@ body{margin:0}
     border-right: 0.05vw rgb(216, 216, 216) solid ;
     float:left;
 }
+.add_file_button
+{
+    background:#1AAB8A;
+    color:white;
+    border:none;
+    position:relative;
+    height:6%;
+    width:14.9vw;
+    font-size:1.2em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    overflow-y:hidden;
+}
+
+.add_file_button:hover
+{
+    background:white;
+    color:black;
+}
+.add_file_button:before,.add_file_button:after
+{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+}
+.add_file_button:after
+{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+}
+
+.add_file_button:hover:before,.add_file_button:hover:after
+{
+    width:100%;
+    transition:800ms ease all;
+}
+  
+.file_category
+{
+    text-align:center;
+}
+
+
 /* ============== left_side END ============== */
 .right_side
 {
@@ -210,26 +262,101 @@ body{margin:0}
 .cell_container
 {
     display:table;
-    width:100%;
-    background-color: rgb(239,239,237);
+    width:76.5vw;
+    margin-top:6vh;
+    margin-left:4.25vw;
+    margin-right:4.25vw;
 
 
 }
 
-
-.cell_container .cell + .cell{
-    border-left:1px solid #ccc;
-
-}
-
-.cell_container .cell
+.cell
 {
-    display: table-cell;
+    width:14.5vw;
+    height:8.43vw;
+    margin-right:2.125vw;
+    margin-left:2.125vw;
+    margin-bottom:4.5vw;
+    
+}
+
+.cell_container a:visited
+{
+    color:black;
+}
+
+.cell_container a .cell + .cell{
+    border-left:1px solid #ccc;
+    border-top:1px solid #ccc;
+
+}
+
+.cell_container a .cell
+{
+    background-color: rgb(239,239,237);
+    border-left:1px solid #ccc;
+    border-top:1px solid #ccc;
+    display: inline-block;
     vertical-align: middle;
     text-align:center;
-    padding : 20px;
+    
+    padding : 0; /* cell 테두리와 컨텐츠 사이의 간격 */
+ 
+    
 }
 
+/* 사진 각 셀칸에 꽉 채우고 세로 중앙 정렬 시키기 */
+.thumbnail
+{
+    position:relative;
+    padding-top:56.25%; /* 이미지 16:9 비율로 채우기*/
+    overflow:hidden;
+}
+
+
+
+.thumbnail .centered 
+{ 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    -webkit-transform: translate(50%,50%); 
+    -ms-transform: translate(50%,50%); 
+    transform: translate(50%,50%); 
+}
+
+.thumbnail .centered img 
+{ 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    max-width: 100%; 
+    height: auto; 
+    -webkit-transform: translate(-50%,-50%); 
+    -ms-transform: translate(-50%,-50%); 
+    transform: translate(-50%,-50%); 
+}
+
+.thumbnail .centered .cell_title
+{ 
+    position: absolute; 
+    width:100%;
+    height:25%;
+    top: 45%; 
+    left: 0; 
+    max-width: 100%; 
+    width:100%;
+    
+    -webkit-transform: translate(-50%,-50%); 
+    -ms-transform: translate(-50%,-50%); 
+    transform: translate(-50%,-50%); 
+    z-index:999;
+    background-color: rgba(255, 255, 255, 0.5);
+    font-size:1.1em;
+    line-height:1.7em; /* 줄간격 조정 */
+}
 
 
 
