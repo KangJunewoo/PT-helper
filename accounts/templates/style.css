@@ -7,116 +7,60 @@
 }
 
 /* the start of index.html css part */
-body {
-  background-color: #fafafa;
+.index-nav {
+  height: 70px;
+  background-color: #f1ebde;
 }
 
-/*높이 값은 자식에게 부여*/
-#header {
-  margin: 0;
-  width: 100%;
-  position: absolute; /*x,y,z축 반드시 하나는 써야함. 띄우기 위해서 사용*/
-  left: 0;
-  top: 0;
-  z-index: 998; /*가장 위에 떠있어야하니까*/
-  background-color: #d9c2b9;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-#header .logo {
-  margin-left: 10px;
-  width: 100px;
+.index-nav nav-log {
   height: 32px;
+  margin: 0 auto;
+  background-color: #f1ebde;
 }
-
-#header .logo > a {
-  color: transparent;
-}
-
-/*logo의 높이를 80px로 설정*/
-#header .logo .main_logo {
-  margin: 0;
-  background-image: url(/asset/data.png);
+.index-main-banner {
+  background-image: url("asset/backimg01.jpg");
   background-size: cover;
-  width: 32px;
-  height: 32px;
-}
-
-.index_main_container {
-  position: absolute;
-  margin: 0;
-  width: 100%;
-  background-color: gray;
-}
-
-.index_inner {
   margin: 0 auto;
-  padding-top: 100px;
-  width: 1194px;
-  height: 808px;
-  /*background-color: indianred;*/
-}
-
-.index_main_banner {
-  padding-top: 32px;
-  height: 350px;
-  /*background-color: #4e4c4c;*/
-}
-
-.index_main_title {
-  margin: 0 auto;
-  width: 786px;
-  height: 165px;
+  height: 1000px;
   text-align: center;
-  vertical-align: center;
-  /*background-color: #fafafa;*/
+  background-color: #f1ebde;
 }
 
-.index_main_title h1 {
-  font-size: 4em;
-  font-family: "Rock Salt", cursive;
-  line-height: 165px;
-  vertical-align: center;
+.index-main-banner h1 {
+  height: 200px;
+  padding-top: 200px;
+  font-size: 150px;
+  font-family: "Spicy Rice", cursive;
+  letter-spacing: 17px;
+  color: white;
+  line-height: 200px;
 }
 
-.index_sub_title {
-  margin: 0 auto;
-  width: 582px;
-  height: 80px;
-  text-align: center;
-  /*background-color: aliceblue;*/
+.index-main-banner p {
+  height: 100px;
+  font-size: 30px;
+  font-family: "Roboto Mono", monospace;
+  color: white;
+  line-height: 100px;
 }
 
-.index_sub_title {
-  font-size: 20px;
-  font-family: "Comic Neue", cursive;
-  line-height: 60px;
+.index-main-banner .main-banner-lgbtn {
+  padding-top: 30px;
+  height: 50px;
 }
 
-.kakao_login_btn {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.kakao_login_btn button {
-  width: 380px;
+.main-banner-lgbtn button {
+  width: 400px;
   height: 50px;
   font-size: 20px;
-  background-color: rgb(219, 219, 82);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 15px;
 }
-.index_contents_box {
-  background-image: url("/asset/train.jpg");
-  background-size: cover;
-  display: float;
-  margin-top: 80px;
-  height: 378px;
-  background-color: gray;
+
+.index-footer {
+  height: 70px;
+  background-color: #f1ebde;
 }
+
+/* the end of the index */
 
 .shaped_square {
   text-align: center;
