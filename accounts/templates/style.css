@@ -2,14 +2,27 @@
 
     font-family:'SeoulNamsanM';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff'); 
-    font-weight: normal; 
+    font-weight: lighter; 
     font-style: normal; 
   
   
-  
+    
   
 }
 
+
+@font-face { 
+    font-family: 'S-CoreDream-2ExtraLight'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); 
+    font-weight: normal; 
+    font-style: normal; }
+
+
+    @font-face { 
+        font-family: 'Arita-dotum-Medium'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff'); 
+        font-weight: normal; 
+        font-style: normal; }
 .shaped_square
 {
     text-align:center;
@@ -32,7 +45,7 @@
 
 }
   
-body,h1,h2,h3,h4,h5,button {font-family: "SeoulNamsanM", sans-serif}
+body,h1,h2,h3,h4,h5,button {font-family: "Arita-dotum-Medium","S-CoreDream-2ExtraLight","SeoulNamsanM", sans-serif}
 body{margin:0}
 
 .navi
@@ -50,63 +63,74 @@ body{margin:0}
 .navi *
 {
     display:inline-block;
+    z-index:9999;
 }
 
-.logo_image
-{
-    float:left;
-    width:15vmin;
-    margin-left:8%;
-    margin-top:-3%;
-    
-}
+    .logo_image
+    {
+        float:left;
+        width:15vmin;
+        margin-left:8%;
+        margin-top:-3%;
+        
+    }
 
-.search
-{
- 
-   
-    position:absolute;
-   margin-left: 3.5vmin;
-    top: 2.5vmin;
-    width:40%;
-    height: 2.5%;
+    .search_group
+    {
+        display:inline;
+        position:absolute;
+        margin-left: 13vmin;
+        top: 2.5vmin;
+    }
 
-
-}
-
-.search_button
-{
-
-    margin-left:65vmin;
-    font-size:2.5vmin;
-
-}
-.user_id,.user_logout
-{
-    margin-right:4vmin;
-    float:right;
-    margin-top:2.7vmin;
-}
-
-#logout
-{
-    text-decoration:none;
-    color:black;
+        .search
+        {
+            border:0;
+            
+            width: 240px;
+            height: 20px;
 
 
-    text-align:center;
+        }
 
-    
-    border:1px black;
+        .search_button
+        {
+            position:absolute;
+
+            top:0;
+            margin-left:2vmin;
+            font-size:1.6vmin;
+            
+
+        }
+    .user_id,.user_logout
+    {
+        margin-right:4vmin;
+        float:right;
+        margin-top:2.7vmin;
+    }
+
+    #logout
+    {   
+
+        margin-top:0;
+        text-decoration:none;
+        color:black;
+
+
+        text-align:center;
+
+        
+        border:1px black;
 
 
 
-}
+    }
 
-#logout:hover
-{
-    color:gray;
-}
+    #logout:hover
+    {
+        color:gray;
+    }
 
 
 
@@ -114,7 +138,7 @@ body{margin:0}
 .main_grid
 {
 
-    height:93vh;
+    height:93vmin;
     width:100vw;
     margin:0;
     display:inline-block;
@@ -126,19 +150,87 @@ body{margin:0}
 
 .left_side
 {
-    width:15vw;
-    height:93vh;
-    background-color: beige;
-    border : 1px black;
+    margin-top:-0.3vh;
+    
+    z-index:-33;
+    width:14.9vw;
+    height:93vmin;
+    background-color: white;
+    border-right: 0.05vw rgb(216, 216, 216) solid ;
     float:left;
 }
-
+/* ============== left_side END ============== */
 .right_side
 {
     height:93vh;
+    margin-top:-0.3vh;
 
-    background-color: antiquewhite;
-    width:85vw;
+    background-color: white;
+    width:84.9vw;
     float:right;
 
 }
+
+
+
+.right_upper
+{
+   
+  
+
+    height:4%;
+    width:100%;
+    border-bottom : 0.05vw rgb(216, 216, 216) solid ;
+
+}
+    .right_upper p
+    {
+        font-size:1em;
+        margin-inline-start:30px;
+    }
+
+    .right_upper > p.route_title
+    {
+        vertical-align: middle;
+        display:inline-block;
+        text-align:middle;
+
+
+
+    }
+
+
+
+
+.right_under
+{
+    
+}
+
+.cell_container
+{
+    display:table;
+    width:100%;
+    background-color: rgb(239,239,237);
+
+
+}
+
+
+.cell_container .cell + .cell{
+    border-left:1px solid #ccc;
+
+}
+
+.cell_container .cell
+{
+    display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+    padding : 20px;
+}
+
+
+
+
+/* ============== right_side END ============== */

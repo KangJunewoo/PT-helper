@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>PT Helper</title>
     <link rel= "stylesheet" type="text/css" href="style.css">
 
 </head>
@@ -17,8 +17,11 @@
     <div class ="navi">
 
         <h1><a href="main.html"><img class ="logo_image" src="asset/logo_1.png"></a></h1>
-        <input class ="search" type="text" placeholder="문서를 검색해주세요">
-        <a><button class="search_button">search</button></a>
+
+        <div class = "search_group">
+            <input class ="search" type="text" placeholder="문서를 검색해주세요">
+            <a><button class="search_button">search</button></a>
+        </div>
 
 
       
@@ -36,7 +39,33 @@
         </div>
 
         <div class = "right_side">
-            <p> this is right side</p>
+            
+            <div class = "right_upper">
+               <p class="route title"> 내 문서 > 폴더 > 경로 표시..</p>
+            </div>
+
+            <div class ="right_under">
+                <div class="cell_container">
+                    <div class = "cell">
+                        <span class="thum"><img src="http://via.placeholder.com/40x40" alt="샘플이미지"></span>
+                        <strong class="title_item">제목</strong>
+                        <p class="desc_item">설명<br></p>
+                    </div>
+
+                    <div class = "cell">
+                        <span class="thum"><img src="http://via.placeholder.com/40x40" alt="샘플이미지"></span>
+                        <strong class="title_item">제목</strong>
+                        <p class="desc_item">설명<br></p>
+                    </div>
+                    <div class = "cell">
+                        <span class="thum"><img src="http://via.placeholder.com/40x40" alt="샘플이미지"></span>
+                        <strong class="title_item">제목</strong>
+                        <p class="desc_item">설명<br></p>
+                    </div>
+                </div>
+            </div>
+
+
         </div>
         
     </div>
