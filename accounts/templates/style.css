@@ -1,236 +1,226 @@
-@font-face{
-
-    font-family:'SeoulNamsanM';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff') format('woff'); 
-    font-weight: lighter; 
-    font-style: normal; 
-  
-  
-    
-  
+@font-face {
+  font-family: "SeoulNamsanM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SeoulNamsanM.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-@font-face { 
-    font-family: 'S-CoreDream-2ExtraLight'; 
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); 
-    font-weight: normal; 
-    font-style: normal; }
-
-
-    @font-face { 
-        font-family: 'Arita-dotum-Medium'; 
-        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-dotum-Medium.woff') format('woff'); 
-        font-weight: normal; 
-        font-style: normal; }
-.shaped_square
-{
-    text-align:center;
-
-    font-size:32px;
-
-    color:#FFFFFF;
-
-    padding:10px;
-
-    border:50px red;
-
-    margin:10px;
-
-    border-radius:5px;
-    background:none;
-
-
-
-
-}
-  
-body,h1,h2,h3,h4,h5,button {font-family: "Arita-dotum-Medium","S-CoreDream-2ExtraLight","SeoulNamsanM", sans-serif}
-body{margin:0}
-
-.navi
-{
-    margin:0;
-    height:7.5vmin;
-    width:100vw;
-    
-    background-color: rgb(239,239,237);
-    
+/* the start of index.html css part */
+body {
+  background-color: #fafafa;
 }
 
-
-
-.navi *
-{
-    display:inline-block;
-    z-index:9999;
+/*높이 값은 자식에게 부여*/
+#header {
+  margin: 0;
+  width: 100%;
+  position: absolute; /*x,y,z축 반드시 하나는 써야함. 띄우기 위해서 사용*/
+  left: 0;
+  top: 0;
+  z-index: 998; /*가장 위에 떠있어야하니까*/
+  background-color: #d9c2b9;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-    .logo_image
-    {
-        float:left;
-        width:15vmin;
-        margin-left:8%;
-        margin-top:-3%;
-        
-    }
+#header .logo {
+  margin-left: 10px;
+  width: 100px;
+  height: 32px;
+}
 
-    .search_group
-    {
-        display:inline;
-        position:absolute;
-        margin-left: 13vmin;
-        top: 2.5vmin;
-    }
+#header .logo > a {
+  color: transparent;
+}
 
-        .search
-        {
-            border:0;
-            
-            width: 240px;
-            height: 20px;
+/*logo의 높이를 80px로 설정*/
+#header .logo .main_logo {
+  margin: 0;
+  background-image: url(/asset/data.png);
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+}
 
+.index_main_container {
+  position: absolute;
+  margin: 0;
+  width: 100%;
+  background-color: gray;
+}
 
-        }
+.index_inner {
+  margin: 0 auto;
+  padding-top: 100px;
+  width: 1194px;
+  height: 808px;
+  /*background-color: indianred;*/
+}
 
-        .search_button
-        {
-            position:absolute;
+.index_main_banner {
+  padding-top: 32px;
+  height: 350px;
+  /*background-color: #4e4c4c;*/
+}
 
-            top:0;
-            margin-left:2vmin;
-            font-size:1.6vmin;
-            
+.index_main_title {
+  margin: 0 auto;
+  width: 786px;
+  height: 165px;
+  text-align: center;
+  vertical-align: center;
+  /*background-color: #fafafa;*/
+}
 
-        }
-    .user_id,.user_logout
-    {
-        margin-right:4vmin;
-        float:right;
-        margin-top:2.7vmin;
-    }
+.index_main_title h1 {
+  font-size: 4em;
+  font-family: "Rock Salt", cursive;
+  line-height: 165px;
+  vertical-align: center;
+}
 
-    #logout
-    {   
+.index_sub_title {
+  margin: 0 auto;
+  width: 582px;
+  height: 80px;
+  text-align: center;
+  /*background-color: aliceblue;*/
+}
 
-        margin-top:0;
-        text-decoration:none;
-        color:black;
+.index_sub_title {
+  font-size: 20px;
+  font-family: "Comic Neue", cursive;
+  line-height: 60px;
+}
 
+.kakao_login_btn {
+  margin: 0 auto;
+  text-align: center;
+}
 
-        text-align:center;
+.kakao_login_btn button {
+  width: 380px;
+  height: 50px;
+  font-size: 20px;
+  background-color: rgb(219, 219, 82);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 15px;
+}
+.index_contents_box {
+  background-image: url("/asset/train.jpg");
+  background-size: cover;
+  display: float;
+  margin-top: 80px;
+  height: 378px;
+  background-color: gray;
+}
 
-        
-        border:1px black;
+.shaped_square {
+  text-align: center;
 
+  font-size: 32px;
 
+  color: #ffffff;
 
-    }
+  padding: 10px;
 
-    #logout:hover
-    {
-        color:gray;
-    }
+  border: 50px red;
 
+  margin: 10px;
 
+  border-radius: 5px;
+  background: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+button {
+  font-family: "SeoulNamsanM", sans-serif;
+}
+body {
+  margin: 0;
+}
+
+.navi {
+  margin: 0;
+  height: 7.5vmin;
+  width: 100vw;
+
+  background-color: rgb(239, 239, 237);
+}
+
+.navi * {
+  display: inline-block;
+}
+
+.logo_image {
+  float: left;
+  width: 15vmin;
+  margin-left: 8%;
+  margin-top: -3%;
+}
+
+.search {
+  position: absolute;
+  margin-left: 3.5vmin;
+  top: 2.5vmin;
+  width: 40%;
+  height: 2.5%;
+}
+
+.search_button {
+  margin-left: 65vmin;
+  font-size: 2.5vmin;
+}
+.user_id,
+.user_logout {
+  margin-right: 4vmin;
+  float: right;
+  margin-top: 2.7vmin;
+}
+
+#logout {
+  text-decoration: none;
+  color: black;
+
+  text-align: center;
+
+  border: 1px black;
+}
+
+#logout:hover {
+  color: gray;
+}
 
 /* ============== NAVI END ============== */
-.main_grid
-{
+.main_grid {
+  height: 93vh;
+  width: 100vw;
+  margin: 0;
+  display: inline-block;
 
-    height:93vmin;
-    width:100vw;
-    margin:0;
-    display:inline-block;
-
-    background-color:white;
-
+  background-color: white;
 }
 
-
-.left_side
-{
-    margin-top:-0.3vh;
-    
-    z-index:-33;
-    width:14.9vw;
-    height:93vmin;
-    background-color: white;
-    border-right: 0.05vw rgb(216, 216, 216) solid ;
-    float:left;
-}
-/* ============== left_side END ============== */
-.right_side
-{
-    height:93vh;
-    margin-top:-0.3vh;
-
-    background-color: white;
-    width:84.9vw;
-    float:right;
-
+.left_side {
+  width: 15vw;
+  height: 93vh;
+  background-color: beige;
+  border: 1px black;
+  float: left;
 }
 
+.right_side {
+  height: 93vh;
 
-
-.right_upper
-{
-   
-  
-
-    height:4%;
-    width:100%;
-    border-bottom : 0.05vw rgb(216, 216, 216) solid ;
-
+  background-color: antiquewhite;
+  width: 85vw;
+  float: right;
 }
-    .right_upper p
-    {
-        font-size:1em;
-        margin-inline-start:30px;
-    }
-
-    .right_upper > p.route_title
-    {
-        vertical-align: middle;
-        display:inline-block;
-        text-align:middle;
-
-
-
-    }
-
-
-
-
-.right_under
-{
-    
-}
-
-.cell_container
-{
-    display:table;
-    width:100%;
-    background-color: rgb(239,239,237);
-
-
-}
-
-
-.cell_container .cell + .cell{
-    border-left:1px solid #ccc;
-
-}
-
-.cell_container .cell
-{
-    display: table-cell;
-    vertical-align: middle;
-    text-align:center;
-    padding : 20px;
-}
-
-
-
-
-/* ============== right_side END ============== */
