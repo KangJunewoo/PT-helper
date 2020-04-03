@@ -5,8 +5,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # 발표
-    path('', include('presentation.urls')),
+    # 발표 -> 일단 안돌아가므로 비활성화
+    # path('', include('presentation.urls')),
     # 계정
     path('account/', include('accounts.urls')),
 ]
