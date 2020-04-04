@@ -211,6 +211,13 @@ body{margin:0}
 }
 
 
+
+
+
+#file_upload{
+    display:none;
+}
+
 /* ============== left_side END ============== */
 .right_side
 {

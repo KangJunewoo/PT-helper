@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PT Helper</title>
     <link rel= "stylesheet" type="text/css" href="style_main.css">
-
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <style>
@@ -34,7 +34,8 @@
     <div class = "main_grid">
 
         <div class = "left_side">
-            <button  class="add_file_button"> 슬라이드 추가하기</button>
+            <form> <input type="file" id="file_upload" accept = ".pdf" name="file" onchange="changeValue(this)"/> </form>
+            <button onclick = document.all.file.click() class="add_file_button"> 슬라이드 추가하기</button> </form>
             <div class = "file_category">
                 <br>
                 여기에 경로?
@@ -138,4 +139,27 @@
 
     
 </body>
+
+<script type="text/javascript">
+
+    $(function () {
+    
+        $('#btn-upload').click(function (e) {
+        
+        e.preventDefault();
+        
+        $('#file').click();
+        
+        });
+    
+    });
+    
+        
+    
+// <form><input> 로 파일 업로드 버튼 만든 대신 숨기고, 특정 버튼 누르면 저 파일 업로드 버튼 작동하도록만 간단하게.
+    
+</script>
+    
+    
+    
 </html>
