@@ -7,5 +7,5 @@ from django.dispatch import receiver
 from datetime import datetime
 
 # User 계정은 카카오톡 API로 email로 취급
-# class Profile(models.Model):
-# 	user = models.OneToOneField(User, on_delete=models.CASCADE)
+class Profile(models.Model):
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
