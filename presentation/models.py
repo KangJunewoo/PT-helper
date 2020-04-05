@@ -21,7 +21,7 @@ class PDF(models.Model):
 
 # 큐카드 하나하나를 의미하고, 하나의 PDF모델에는 여러 개의 Quecard 모델이 연결
 class Quecard(models.Model):
-    pdffile = models.Foreignkey(PDF, on_delete=models.CASCADE) # PDF파일 id 값 들어감
+    pdffile = models.ForeignKey(PDF, on_delete=models.CASCADE) # PDF파일 id 값 들어감
     name = models.CharField(max_length=30, null=False) # 이미지 파일별 이름, 제목+sequence
     image = models.ImageField(upload_to="slides") # 큐카드 만들어질 때 View에서 사용자별 폴더를 만들어서 저장될 수 있게 구현
     sequence = models.IntegerField(null=False) # 제목 뒤에 인덱스로 할 수도 있는데 간단하게 sequence로 츨력, sequence 0값이 썸네일
