@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 import requests
 
 '''
@@ -38,19 +38,30 @@ def login(request):
 
 def login_process(request):
     kakao_access_code = request.GET['code']
-    print()
-    url = 'https://kauth/kakao/com/oauth/token'
+    print(kakao_access_code)
+    url = 'https://kauth.kakao.com/oauth/token'
     headers={'Content-type':'application/x-www-form-urlencoded; charset=utf-8'}
     APP_KEY = 'c143f6d80aae41f4dd5eea279803c34a'
     body={
         'grant_type' : 'authorization_code',
         'client_id': APP_KEY,
-        'redirect_uri':'http://localhost:8000/account',
+        'redirect_uri':'http://localhost:8000/account/login_process',
         'code':kakao_access_code,
     }
-    kakao_response=requests.post(url, headers=headers, data=body)
-    print(kakao_response)
-    return render('/index')
+    kakao_response=requests.post(url, headers=headers, data=body).json()
+    access_token=kakao_response['access_token']
+    print(access_token)
+    #return JsonResponse(kakao_response)
+    info_url='https://kapi.kakao.com/v2/user/me'
+    info_headers={
+        'Content-type':'application/x-www-form-urlencoded; charset=utf-8',
+        'Authorization': f'Bearer {access_token}'
+    }
+    info_body={
+        'property_keys':["kakao_account.email"]
+    }
+    user_info=requests.get(url, headers=info_headers, data=info_body)
+    return HttpResponse(user_info)
 '''
 def info(request):
     KAKAO_HOST = 'kauth.kakao.com'
