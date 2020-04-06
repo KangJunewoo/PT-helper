@@ -5,15 +5,22 @@ from pdf2image.exceptions import (
     PDFPageCountError,
     PDFSyntaxError
 )
-
-# 유저 세션으로 페이지 결정
+# 일단 함수형으로 view짜기 
+# Page rendering
 def home(request):
+	# 유저 세션으로 페이지 결정
 	user_session = request.session.get('user')
 	if user_session:
 		# content = {}
-		return render(request, 'presentation/index.html', content)
+		return render(request, 'index.html', content)
 	else:
-		return render(request, 'presentation/login.html')
+		return render(request, 'login.html')
+
+def uploads(request):
+	return render(request, 'makePT.html')
+
+# Logic
+
 
 def pdfToImages():
     images = convert_from_path('example.pdf')
