@@ -54,14 +54,13 @@ def login_process(request):
     #return JsonResponse(kakao_response)
     info_url='https://kapi.kakao.com/v2/user/me'
     info_headers={
-        'Content-type':'application/x-www-form-urlencoded; charset=utf-8',
-        'Authorization': f'Bearer {access_token}'
+        'Authorization': f'Bearer {access_token}',
+        'Content-type':'application/x-www-form-urlencoded; charset=utf-8'
     }
-    info_body={
-        'property_keys':["kakao_account.email"]
-    }
-    user_info=requests.get(url, headers=info_headers, data=info_body)
-    return HttpResponse(user_info)
+    user_info=requests.get(info_url, headers=info_headers).json(encoding='utf8')
+    return render(request,'info.html',{'name':user_info['properties']['nickname'],'img':user_info['properties']['profile_image'],'email':user_info['kakao_account']['email']})
+    return JsonResponse(user_info)
+
 '''
 def info(request):
     KAKAO_HOST = 'kauth.kakao.com'
