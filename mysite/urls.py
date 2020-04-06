@@ -8,7 +8,7 @@ urlpatterns = [
     # 발표 -> 일단 안돌아가므로 비활성화
     # path('', include('presentation.urls')),
     # 계정
-    path('account/', include('accounts.urls')),
+    path('account/', include('account.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
