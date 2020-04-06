@@ -5,6 +5,8 @@ from pdf2image.exceptions import (
     PDFPageCountError,
     PDFSyntaxError
 )
+#from .models import PDF, Quecard
+
 # 일단 함수형으로 view짜기 
 # Page rendering
 def home(request):
@@ -20,11 +22,10 @@ def uploads(request):
 	return render(request, 'makePT.html')
 
 # Logic
-
-
 def pdfToImages():
     images = convert_from_path('example.pdf')
     i = 1
     for image in images:
 	    image.save('image' + str(i) + '.jpg', 'JPEG')
 	    i = i + 1
+		#Quecard.save()
