@@ -3,6 +3,5 @@
 __pycache__
 VENV
 db.sqlite3
-/static
 .DS_Store
 .vscode
