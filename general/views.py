@@ -25,10 +25,11 @@ import requests
 
 # Create your views here.
 def index(request):
+    #로그인 여부 검사, 되어있다면 main으로 리다이렉트
     return render(request, 'index.html')
 
 def login(request):
-    REDIRECT_URI = 'http://localhost:8000/account/login_process'
+    REDIRECT_URI = 'http://localhost:8000/login_process'
     KAKAO_HOST = 'kauth.kakao.com'
     APP_KEY = 'c143f6d80aae41f4dd5eea279803c34a'
     
@@ -45,7 +46,7 @@ def login_process(request):
     body={
         'grant_type' : 'authorization_code',
         'client_id': APP_KEY,
-        'redirect_uri':'http://localhost:8000/account/login_process',
+        'redirect_uri':'http://localhost:8000/login_process',
         'code':kakao_access_code,
     }
     kakao_response=requests.post(url, headers=headers, data=body).json()
@@ -59,13 +60,11 @@ def login_process(request):
     }
     user_info=requests.get(info_url, headers=info_headers).json(encoding='utf8')
     return render(request,'info.html',{'name':user_info['properties']['nickname'],'img':user_info['properties']['profile_image'],'email':user_info['kakao_account']['email']})
-    return JsonResponse(user_info)
+    #return JsonResponse(user_info)
 
-'''
-def info(request):
-    KAKAO_HOST = 'kauth.kakao.com'
-    KAKAO_INFO_URL = f'https://{KAKAO_HOST}/v2/user/me'
-    client = Client()
-    response = client.get(KAKAO_INFO_URL)
-    return HttpResponse(response)
-'''
+def main(request):
+    #로그인이 안되어있다면, 인덱스로 리다이렉트
+    return render(request, 'main.html')
+
+def guide(request):
+    return render(request, 'guide.html')

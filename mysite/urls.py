@@ -8,7 +8,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     
     # general - index, main, help
-    path('/', include('general.urls')),
+    path('', include('general.urls')),
     
     # presentation - add, show, make
     # path('presentation/', include('presentation.urls')),
