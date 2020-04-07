@@ -4,11 +4,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
+    # admin - handling DBs
     path('admin/', admin.site.urls),
-    # 발표 -> 일단 안돌아가므로 비활성화
-    # path('', include('presentation.urls')),
-    # 계정
-    path('account/', include('account.urls')),
+    
+    # general - index, main, help
+    path('/', include('general.urls')),
+    
+    # presentation - add, show, make
+    # path('presentation/', include('presentation.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
