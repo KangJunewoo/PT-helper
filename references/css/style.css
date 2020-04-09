@@ -21,7 +21,7 @@
   left: 0;
   top: 0;
   z-index: 999; */
-  height: 100px;
+  height: 80px;
   line-height: 100px;
   background: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -41,11 +41,13 @@
   /* background: #333; */
 }
 #footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   clear: both;
   width: 100%;
-  height: 100px;
-  line-height: 100px;
-  background: #444;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  /* background: #444; */
 }
 /* 헤더 레이아웃 */
 #header .container {
@@ -83,7 +85,7 @@
   margin-top: 250px;
   font-size: 150px;
   font-family: Gaps2;
-  letter-spacing: 15px;
+  letter-spacing: 10px;
   color: black;
 }
 #contents p {
@@ -107,7 +109,25 @@
 }
 
 /* 푸터 레이아웃 */
-#footer {
+#footer .footer-icon {
+  padding-bottom: 30px;
+  letter-spacing: 50px;
+  /* background: rgba(0, 0, 0, 0.1); */
+}
+#footer .footer-icon a {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  background: url(../pics/sprite-pt.png);
+}
+#footer .footer-icon a.icon1 {
+  background-position: 0 0;
+}
+#footer .footer-icon a.icon2 {
+  background-position: 0 -60px;
+}
+#footer .footer-icon a.icon3 {
+  background-position: 0 -120px;
 }
 
 /* 컨테이너 */
