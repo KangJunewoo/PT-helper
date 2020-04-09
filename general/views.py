@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 import requests
+from .models import Profile, User
 
 '''
 정리를 해보자면
@@ -39,7 +40,7 @@ def login(request):
 
 def login_process(request):
     kakao_access_code = request.GET['code']
-    print(kakao_access_code)
+    #print(kakao_access_code)
     url = 'https://kauth.kakao.com/oauth/token'
     headers={'Content-type':'application/x-www-form-urlencoded; charset=utf-8'}
     APP_KEY = 'c143f6d80aae41f4dd5eea279803c34a'
@@ -59,12 +60,44 @@ def login_process(request):
         'Content-type':'application/x-www-form-urlencoded; charset=utf-8'
     }
     user_info=requests.get(info_url, headers=info_headers).json(encoding='utf8')
-    return render(request,'info.html',{'name':user_info['properties']['nickname'],'img':user_info['properties']['profile_image'],'email':user_info['kakao_account']['email']})
+    # FIXME : 이 부분 좀더 공부해서 db저장+리다이렉트 완성하기
+    try:
+        profile = Profile.objects.get(_id=user_info['id'])
+    except:
+        profile = Profile(\
+            _id=user_info['id'],\
+            name=user_info['properties']['nickname'],\
+            img=user_info['properties']['profile_image'],\
+            email=user_info['kakao_account']['email']\
+            )
+        print(profile)
+        profile.user=request.user
+        profile.save()
+        
+    return redirect('/main')
+
+
+    print(user_info) # info_sample.json 참고
+    '''
+    nie={
+
+        'name':user_info['properties']['nickname'],
+        'img':user_info['properties']['profile_image'],
+        'email':user_info['kakao_account']['email']
+    }
+    
+    response=main(request, nie)
+    return response
+    '''
+    #return render(request,'info.html',nie)
     #return JsonResponse(user_info)
 
 def main(request):
     #로그인이 안되어있다면, 인덱스로 리다이렉트
-    return render(request, 'main.html')
+    profile=request.user.Profile
+    print(profile)
+    return render(request, 'info.html')
+    #return render(request, 'main.html')
 
 def guide(request):
     return render(request, 'guide.html')
