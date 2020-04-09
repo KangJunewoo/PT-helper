@@ -368,3 +368,114 @@ body{margin:0}
 
 
 /* ============== right_side END ============== */
+
+
+
+
+
+
+
+/* ================== makePT part ================== */
+
+
+
+.right_upper_2
+{
+   
+  
+
+    height:6%;
+    width:100%;
+    border-bottom : 0.05vw rgb(216, 216, 216) solid ;
+
+}
+
+.user_input
+{
+    height:90%;
+    width:40%;
+    font-size:1.3em;
+  
+}
+
+
+.user_ppt_save{
+    background:#1AAB8A;
+    color:#fff;
+    border:none;
+    position:relative;
+    height:100%;
+    font-size:1.6em;
+    padding:0 2em;
+    cursor:pointer;
+    transition:800ms ease all;
+    outline:none;
+    float:right;
+    margin-right:20px;
+  }
+  .user_ppt_save:hover{
+    background:#fff;
+    color:#1AAB8A;
+  }
+  .user_ppt_save:before,.user_ppt_save:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: #1AAB8A;
+    transition:400ms ease all;
+  }
+  .user_ppt_save:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .user_ppt_save:hover:before,.user_ppt_save:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
+
+
+
+
+
+
+
+
+
+/* ================== right_under_2 part================== */
+.right_upper_2
+{
+
+    overflow-y:scroll;
+}
+
+
+.page_container
+{
+    width:100%;
+    height:50vh;
+
+    border-bottom:1px solid gray;
+
+    display:inline-block;
+}
+
+    .page_viewer
+    {
+        width:60%;
+        height:100%;    
+        border-right:1px solid gray;
+        overflow:hidden;
+        background-size:cover;
+    }
+
+    .page_img
+    {
+        background-size:cover;
+        overflow:hidden;
+    }
