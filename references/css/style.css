@@ -23,15 +23,16 @@
   z-index: 999; */
   height: 80px;
   line-height: 100px;
-  background: white;
+  /* background: white; */
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 #contents {
   float: left;
   width: 60%;
   height: 750px;
+  background: url(../pics/bg02.png) no-repeat;
+  background-position: -50px -200px;
   /* line-height: 750px; */
-  /* background: #222; */
 }
 #side {
   float: left;
@@ -39,6 +40,8 @@
   height: 750px;
   line-height: 750px;
   /* background: #333; */
+  background: url(../pics/bg02.png) no-repeat;
+  background-position: -900px -100px;
 }
 #footer {
   display: flex;
@@ -46,6 +49,7 @@
   align-items: center;
   clear: both;
   width: 100%;
+  height: 100px;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
   /* background: #444; */
 }
@@ -81,19 +85,27 @@
   height: inherit;
   text-align: right;
 }
-#contents h1 {
+#contents .cont-mtitle {
   margin-top: 250px;
   font-size: 150px;
   font-family: Gaps2;
   letter-spacing: 10px;
   color: black;
 }
-#contents p {
-  margin-top: 50px;
+#contents .cont-stitle {
+  margin: 40px 0 30px;
   font-size: 25px;
   font-family: BMHANNAAir;
   letter-spacing: 10px;
   color: black;
+}
+#contents .cont-btn {
+  margin: 0 auto;
+  color: transparent;
+  width: 183px;
+  height: 45px;
+  background: url(../../static/kakao_login.png) no-repeat;
+  /* border: 1px solid gray; */
 }
 
 /* 사이드 레이아웃 */
@@ -104,12 +116,13 @@
   margin-top: 37%;
   width: 480px;
   height: 100px;
-  background-color: #b8223c;
+  /* background-color: #b8223c; */
   border-radius: 50px 0 50px;
 }
 
 /* 푸터 레이아웃 */
 #footer .footer-icon {
+  padding-top: 20px;
   padding-bottom: 30px;
   letter-spacing: 50px;
   /* background: rgba(0, 0, 0, 0.1); */
@@ -118,7 +131,7 @@
   width: 60px;
   height: 60px;
   display: inline-block;
-  background: url(../pics/sprite-pt.png);
+  background: url(../pics/sprite-pt02.png);
 }
 #footer .footer-icon a.icon1 {
   background-position: 0 0;
@@ -127,7 +140,7 @@
   background-position: 0 -60px;
 }
 #footer .footer-icon a.icon3 {
-  background-position: 0 -121px;
+  background-position: 0 -120px;
 }
 
 /* 컨테이너 */
