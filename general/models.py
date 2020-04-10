@@ -8,10 +8,10 @@ from datetime import datetime
 
 # User 계정은 카카오톡 API로 email로 취급
 class Profile(models.Model):
-	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	_id = models.CharField(max_length=10, blank=True, null=True)
+	# user = models.OneToOneField(User, on_delete=models.CASCADE)
+	# kakao_id = models.CharField(max_length=10, blank=True, null=True)
 	name = models.CharField(max_length=10, blank=True, null=True)
-	img = models.ImageField(blank=True,null=True)
+	# img = models.ImageField(blank=True,null=True)
 	email = models.EmailField(blank=True,null=True)
 	
 

@@ -60,7 +60,18 @@ def login_process(request):
         'Content-type':'application/x-www-form-urlencoded; charset=utf-8'
     }
     user_info=requests.get(info_url, headers=info_headers).json(encoding='utf8')
-    # FIXME : 이 부분 좀더 공부해서 db저장+리다이렉트 완성하기
+    print(user_info)
+    if Profile.objects.filter(email=user_info['kakao_account']['email']).exists():
+        return redirect('/main')
+    else:
+        profile = Profile(\
+            name=user_info['properties']['nickname'],\
+            email=user_info['kakao_account']['email'])
+        print(profile)
+        #profile.user=request.user
+        profile.save()
+        return redirect('/main')
+    '''
     try:
         profile = Profile.objects.get(_id=user_info['id'])
     except:
@@ -78,7 +89,7 @@ def login_process(request):
 
 
     print(user_info) # info_sample.json 참고
-    '''
+    
     nie={
 
         'name':user_info['properties']['nickname'],
@@ -94,8 +105,9 @@ def login_process(request):
 
 def main(request):
     #로그인이 안되어있다면, 인덱스로 리다이렉트
-    profile=request.user.Profile
-    print(profile)
+    # profile=request.user.Profile
+    # print(profile)
+    # FIXME : name이랑 email 렌더하기
     return render(request, 'info.html')
     #return render(request, 'main.html')
 
